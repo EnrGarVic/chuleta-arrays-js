@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuleta de Métodos de Array</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chuleta de Métodos de Array en JavaScript</h1>
+
+  <h2>1. Métodos para agregar/remover elementos</h2>
+  <table>
+    <caption>Métodos de agregar y remover</caption>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica array</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>push(...items)</code></td>
+        <td>Sí</td>
+        <td><code>arr.push(item1, item2)</code></td>
+        <td>Agregar elementos al final del array.</td>
+      </tr>
+      <tr>
+        <td><code>pop()</code></td>
+        <td>Sí</td>
+        <td><code>arr.pop()</code></td>
+        <td>Eliminar el último elemento del array.</td>
+      </tr>
+      <tr>
+        <td><code>unshift(...items)</code></td>
+        <td>Sí</td>
+        <td><code>arr.unshift(item1, item2)</code></td>
+        <td>Agregar elementos al inicio del array.</td>
+      </tr>
+      <tr>
+        <td><code>shift()</code></td>
+        <td>Sí</td>
+        <td><code>arr.shift()</code></td>
+        <td>Eliminar el primer elemento del array.</td>
+      </tr>
+      <tr>
+        <td><code>splice(pos, deleteCount, ...items)</code></td>
+        <td>Sí</td>
+        <td><code>arr.splice(1, 2, "a", "b")</code></td>
+        <td>Eliminar o insertar elementos en una posición específica.</td>
+      </tr>
+      <tr>
+        <td><code>slice(start, end)</code></td>
+        <td>No</td>
+        <td><code>arr.slice(1, 3)</code></td>
+        <td>Crear un nuevo array copiando desde <code>start</code> hasta <code>end</code> (sin incluir).</td>
+      </tr>
+      <tr>
+        <td><code>concat(...items)</code></td>
+        <td>No</td>
+        <td><code>arr.concat(item1, item2)</code></td>
+        <td>Crear un nuevo array combinando otros arrays o elementos.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Métodos para buscar entre elementos</h2>
+  <table>
+    <caption>Métodos de búsqueda</caption>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica array</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>indexOf(item, pos)</code></td>
+        <td>No</td>
+        <td><code>arr.indexOf("value", 1)</code></td>
+        <td>Encontrar la posición de un elemento.</td>
+      </tr>
+      <tr>
+        <td><code>lastIndexOf(item, pos)</code></td>
+        <td>No</td>
+        <td><code>arr.lastIndexOf("value")</code></td>
+        <td>Encontrar la última posición de un elemento.</td>
+      </tr>
+      <tr>
+        <td><code>includes(value)</code></td>
+        <td>No</td>
+        <td><code>arr.includes("value")</code></td>
+        <td>Comprobar si el array contiene un valor.</td>
+      </tr>
+      <tr>
+        <td><code>find(func)</code></td>
+        <td>No</td>
+        <td><code>arr.find(item => item.prop > 10)</code></td>
+        <td>Devolver el primer elemento que cumpla una condición.</td>
+      </tr>
+      <tr>
+        <td><code>findIndex(func)</code></td>
+        <td>No</td>
+        <td><code>arr.findIndex(item => item.prop > 10)</code></td>
+        <td>Devolver el índice del primer elemento que cumpla una condición.</td>
+      </tr>
+      <tr>
+        <td><code>filter(func)</code></td>
+        <td>No</td>
+        <td><code>arr.filter(item => item.prop > 10)</code></td>
+        <td>Crear un array con elementos que cumplan una condición.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Métodos para iterar sobre elementos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica array</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>forEach(func)</code></td>
+        <td>No</td>
+        <td><code>arr.forEach(item => console.log(item))</code></td>
+        <td>Ejecutar una función para cada elemento.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Métodos para transformar el array</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica array</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>map(func)</code></td>
+        <td>No</td>
+        <td><code>arr.map(item => item * 2)</code></td>
+        <td>Transformar cada elemento del array y devuelve un array de la misma longitud</td>
+      </tr>
+      <tr>
+        <td><code>sort(func)</code></td>
+        <td>Sí</td>
+        <td><code>arr.sort((a, b) => a - b),array.sort( (a, b) => a.localeCompare(b) )</code></td>
+        <td>Ordenar los elementos.</td>
+      </tr>
+      <tr>
+        <td><code>reverse()</code></td>
+        <td>Sí</td>
+        <td><code>arr.reverse()</code></td>
+        <td>Invertir el orden de los elementos.</td>
+      </tr>
+      <tr>
+        <td><code>reduce(func, initial)</code></td>
+        <td>No</td>
+        <td><code>arr.reduce((acc, item) => acc + item, 0)</code></td>
+        <td>Reducir a un solo valor.</td>
+      </tr>
+      <tr>
+        <td><code>split/join</code></td>
+        <td>No</td>
+        <td><code>'a,b'.split(',') de string a array / arr.join(',') de array a string</code></td>
+        <td>Convertir entre arrays y cadenas.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5. Métodos adicionales</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica array</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>Array.isArray(value)</code></td>
+        <td>No</td>
+        <td><code>Array.isArray(arr)</code></td>
+        <td>Verificar si un valor es un array.</td>
+      </tr>
+      <tr>
+        <td><code>some(func)</code></td>
+        <td>No</td>
+        <td><code>arr.some(item => item > 10)</code></td>
+        <td>Comprobar si <strong>algún</strong> elemento cumple una condición.</td>
+      </tr>
+      <tr>
+        <td><code>every(func)</code></td>
+        <td>No</td>
+        <td><code>arr.every(item => item > 10)</code></td>
+        <td>Comprobar si <strong>todos</strong> los elementos cumplen una condición.</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
