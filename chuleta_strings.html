@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuleta de Métodos de String</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chuleta de Métodos de String en JavaScript</h1>
+
+  <h2>1. Métodos para manipular strings</h2>
+  <table>
+    <caption>Métodos de manipulación</caption>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica string</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+        <th>Qué devuelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>toUpperCase()</code></td>
+        <td>No</td>
+        <td><code>str.toUpperCase()</code></td>
+        <td>Convertir todas las letras a mayúsculas.</td>
+        <td>Un nuevo string en mayúsculas.</td>
+      </tr>
+      <tr>
+        <td><code>toLowerCase()</code></td>
+        <td>No</td>
+        <td><code>str.toLowerCase()</code></td>
+        <td>Convertir todas las letras a minúsculas.</td>
+        <td>Un nuevo string en minúsculas.</td>
+      </tr>
+      <tr>
+        <td><code>trim()</code></td>
+        <td>No</td>
+        <td><code>str.trim()</code></td>
+        <td>Eliminar los espacios en blanco al inicio y al final del string.</td>
+        <td>Un nuevo string sin espacios al inicio o final.</td>
+      </tr>
+      <tr>
+        <td><code>repeat(count)</code></td>
+        <td>No</td>
+        <td><code>str.repeat(3)</code></td>
+        <td>Repetir el string la cantidad de veces especificada.</td>
+        <td>Un nuevo string repetido.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Métodos para buscar y extraer contenido</h2>
+  <table>
+    <caption>Métodos de búsqueda y extracción</caption>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica string</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+        <th>Qué devuelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>charAt(index)</code></td>
+        <td>No</td>
+        <td><code>str.charAt(2)</code></td>
+        <td>Obtener el carácter en la posición dada.</td>
+        <td>Un string con el carácter (vacío si está fuera de rango).</td>
+      </tr>
+      <tr>
+        <td><code>includes(substring)</code></td>
+        <td>No</td>
+        <td><code>str.includes("word")</code></td>
+        <td>Comprobar si el string contiene el substring dado.</td>
+        <td><code>true</code> si lo contiene, <code>false</code> si no.</td>
+      </tr>
+      <tr>
+        <td><code>indexOf(substring)</code></td>
+        <td>No</td>
+        <td><code>str.indexOf("word")</code></td>
+        <td>Encontrar la primera posición de un substring.</td>
+        <td>El índice encontrado o <code>-1</code> si no lo encuentra.</td>
+      </tr>
+      <tr>
+        <td><code>lastIndexOf(substring)</code></td>
+        <td>No</td>
+        <td><code>str.lastIndexOf("word")</code></td>
+        <td>Encontrar la última posición de un substring.</td>
+        <td>El índice encontrado o <code>-1</code> si no lo encuentra.</td>
+      </tr>
+      <tr>
+        <td><code>slice(start, end)</code></td>
+        <td>No</td>
+        <td><code>str.slice(2, 5)</code></td>
+        <td>Extraer una porción del string entre <code>start</code> y <code>end</code>.</td>
+        <td>Un nuevo string con la porción extraída.</td>
+      </tr>
+      <tr>
+        <td><code>substring(start, end)</code></td>
+        <td>No</td>
+        <td><code>str.substring(2, 5)</code></td>
+        <td>Extraer una porción del string, intercambiando <code>start</code> y <code>end</code> si es necesario.</td>
+        <td>Un nuevo string con la porción extraída.</td>
+      </tr>
+      <tr>
+        <td><code>substr(start, length)</code></td>
+        <td>No</td>
+        <td><code>str.substr(2, 3)</code></td>
+        <td>Extraer una porción del string con una longitud dada (obsoleto).</td>
+        <td>Un nuevo string con la porción extraída.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Métodos avanzados</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Modifica string</th>
+        <th>Estructura básica</th>
+        <th>Casos de uso</th>
+        <th>Qué devuelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>replace(search, replacement)</code></td>
+        <td>No</td>
+        <td><code>str.replace("word", "newWord")</code></td>
+        <td>Reemplazar la primera ocurrencia del <code>search</code>.</td>
+        <td>Un nuevo string con el reemplazo.</td>
+      </tr>
+      <tr>
+        <td><code>replaceAll(search, replacement)</code></td>
+        <td>No</td>
+        <td><code>str.replaceAll("word", "newWord")</code></td>
+        <td>Reemplazar todas las ocurrencias del <code>search</code>.</td>
+        <td>Un nuevo string con todos los reemplazos.</td>
+      </tr>
+      <tr>
+        <td><code>split(separator)</code></td>
+        <td>No</td>
+        <td><code>str.split(",")</code></td>
+        <td>Dividir un string en un array según el separador dado.</td>
+        <td>Un array con las partes del string.</td>
+      </tr>
+      <tr>
+        <td><code>match(regex)</code></td>
+        <td>No</td>
+        <td><code>str.match(/regex/)</code></td>
+        <td>Obtener las coincidencias de una expresión regular.</td>
+        <td>Un array con las coincidencias o <code>null</code> si no hay ninguna.</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
